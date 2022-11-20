@@ -1,0 +1,104 @@
+.innerdiv1{       
+        border-radius: -9px;
+        padding: 60px;
+        padding-top: 47px;
+        padding-left: 39px;
+        float: left;
+}
+
+.intro{
+        border-radius: 125px;
+        padding: 6px; 
+        border: 80px;
+        float:left;
+}
+
+*{
+        font-family: Inter, sans-serif;
+}
+
+.header-text{
+        font-size: 50px;
+        padding-right: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.Myprojects{
+        padding: 20px;
+        padding-inline: 173px;
+        padding-bottom: 28px;
+}
+
+.gsi{
+
+}
+
+.myp{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: -12px;
+    padding-bottom: -16px;
+    border-radius: 280px;
+    padding-left: 447px;
+    float: unset;
+}
+
+.dp{
+        border-radius: 34px;
+}
+
+
+.footer{
+
+}
+
+.bottom{
+    padding-top: 18px;
+    padding-left: 318px;
+    padding-inline: 333px;
+
+}
+
+.p1{
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration-color: black;
+        color: black;
+}
+
+.social{
+        color: black;
+        font-size: 30px;
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 0 20px;
+        gap: 50;
+}
+
+.social:hover{
+        color: darkgray;
+        transition: 0.2s;
+}
+
+.soc-foot{
+     
+        font-family: Arial, Helvetica, sans-serif;
+        padding-top: -12px;
+        padding-bottom: -16px;
+        border-radius: 280px;
+        padding-left: 470px;
+        float: unset;
+
+}
+
+.lightmode{
+        font-size: 25px;
+        padding-left: 600px;
+        width: 30px;
+        cursor: pointer;
+}
+
+.lightmode:hover{
+        transition: 0.2s;
+        color: darkgrey;
+}
