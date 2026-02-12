@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #0a0f1f;
+  --card: rgba(255,255,255,0.05);
+  --text: #ffffff;
+
+  --primary: #3b82f6;
+  --secondary: #2563eb;
+
+  --nav-bg: rgba(10,15,30,0.6);
+  --hero-gradient: linear-gradient(-45deg, #0a0f1f, #111827, #0a0f1f);
+}
+
+body.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+
+  --primary: #7c3aed;
+  --secondary: #6366f1;
+
+  --nav-bg: rgba(255,255,255,0.85);
+  --hero-gradient: linear-gradient(-45deg, #eef2ff, #f5f3ff, #e0e7ff);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(14px);
+  background: var(--nav-bg);
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--hero-gradient);
+  background-size: 300% 300%;
+  animation: gradientMove 60s linear infinite;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero span {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 40px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+/* ===============================
+   STACK SECTION
+================================ */
+
+.stack-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.stack-item {
+  background: var(--card);
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.stack-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.stack-item ion-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.stack-item img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.stack-item span {
+  display: block;
+  font-weight: 500;
+}
+
+.stack-item i {
+ font-size: 55px;   /* increase size (was ~40px) */
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.stack-item {
+  padding: 15px;
+}
+
+/* SECTIONS */
+section {
+  padding: 110px 8%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s ease;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2.2rem;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CARDS */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.card {
+  background: var(--card);
+  padding: 35px;
+  border-radius: 24px;
+  transition: 0.4s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: translateY(-12px);
+}
+
+/* SOCIAL FOOTER */
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.social {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+  font-size: 24px;
+  color: var(--text);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.social:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: #fff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.6;
+}
+
+/* ===============================
+   MOBILE NAVBAR FIX
+================================ */
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-wrap: wrap;
+    padding: 15px 5%;
+    gap: 10px;
+  }
+
+  /* center menu below logo */
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  /* keep theme button visible */
+  #themeToggle {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  /* reduce hero text size for mobile */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h3 {
+    font-size: 1.1rem;
+  }
+
+  /* reduce section spacing */
+  section {
+    padding: 80px 5%;
+  }
+}
+
+/* ===============================
+   MOBILE SOCIAL ICON FIX
+================================ */
+
+@media (max-width: 768px) {
+
+  .social-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* equal rows */
+    justify-items: center;
+    align-items: center;
+    max-width: 220px;
+    margin: 40px auto 0;
+    gap: 18px;
+  }
+
+  .social {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* fix mobile wrapping layout */
+@media (max-width: 768px) {
+  .social-footer {
+    gap: 18px;
+  }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}

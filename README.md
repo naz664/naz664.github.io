@@ -1,4 +1,5 @@
-# naz664.github.io
-A sample personal website
+# 🌐 My Portfolio
 
-- https://naz664.github.io/
+### 👉 **[Visit](https://naz664.github.io/)**
+
+Personal portfolio website showcasing my projects, tech stack, and work.
